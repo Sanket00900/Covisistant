@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
+
+:root {
+  --blue: #3c6382;
+  --dark-blue: #0a3d62;
+  --red: #ff4f5b;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.3s cubic-bezier(0.38, 1.15, 0.7, 1.12);
+}
+
+*::selection {
+  background: var(--dark-blue);
+  color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+section {
+  min-height: 100vh;
+  padding: 1rem 9%;
+  padding-top: 8rem;
+}
+
+.heading {
+  color: var(--blue);
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  font-weight: normal;
+  padding: 1rem;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+header .logo {
+  font-size: 2.5rem;
+  color: var(--dark-blue);
+}
+
+header .logo span {
+  color: var(--blue);
+}
+
+header .navbar a {
+  font-size: 1.7rem;
+  margin-left: 0.7rem;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  color: var(--dark-blue);
+}
+
+header .navbar a.active,
+header .navbar a:hover {
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header.sticky {
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+#menu {
+  font-size: 3rem;
+  color: var(--blue);
+  cursor: pointer;
+  display: none;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 4rem;
+  border-radius: 5rem;
+  background: var(--blue);
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  font-size: 1.7rem;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: #444;
+  clip-path: polygon(0 0, 100% 0, 0 0, 0% 100%);
+  transition: 0.3s linear;
+}
+
+.btn:hover::before {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.home {
+  background: url(../Images/home-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.home .content {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.home .content h1 {
+  font-size: 5.5rem;
+  color: var(--dark-blue);
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.home .content h3 {
+  font-size: 2.5rem;
+  color: var(--blue);
+  font-weight: normal;
+  margin: 1rem;
+}
+
+.home .content .btn {
+  display: inline-block;
+  padding: 0.7rem 3rem;
+  color: #fff;
+  background: var(--blue);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  font-size: 1.7rem;
+}
+
+.home .content .btn:hover {
+  background: var(--dark-blue);
+}
+
+.prevent {
+  margin: 1rem 0;
+}
+.prevent .heading {
+  text-align: center;
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+.prevent .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.prevent .box-container .box {
+  flex: 1 1 30rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.prevent .box-container .box img {
+  height: 12rem;
+  padding: 1rem;
+}
+
+.prevent .box-container .box h3 {
+  color: var(--blue);
+  font-size: 2rem;
+}
+
+.prevent .box-container .box p {
+  color: var(--dark-blue);
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+.prevent .box-container .box:hover {
+  box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.symtoms {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-top: 3rem;
+  background-color: rgba(240, 240, 240, 0.842);
+}
+
+.symtoms .heading {
+  font-size: 4rem;
+}
+
+.symtoms .content {
+  flex: 1 1 40rem;
+}
+
+.symtoms .image {
+  flex: 1 1 40rem;
+}
+
+.symtoms .image img {
+  width: 100%;
+}
+
+.symtoms .content p {
+  font-size: 2rem;
+  color: #999;
+  padding: 1rem 0;
+  margin: 1rem;
+}
+
+.symtoms .content ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.3rem 0;
+  margin: 1.5rem;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.symtoms .content ul .two {
+  padding-left: 4.5rem;
+}
+
+.symtoms .content ul li {
+  margin-left: 2rem;
+  font-size: 1.7rem;
+  color: #666;
+  padding: 0.5rem 0;
+}
+
+.handwash .heading {
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.handwash .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.handwash .box-container .box {
+  background: #fff;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  margin: 2rem;
+  margin-top: 3rem;
+  padding: 2rem 3.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.handwash .box-container .box:hover {
+  box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.handwash .box-container .box img {
+  height: 17rem;
+  width: 17rem;
+}
+
+.handwash .box-container .box h3 {
+  font-size: 2rem;
+  color: rgb(46, 44, 44);
+  padding: 1rem 0;
+}
+
+.handwash .box-container .box span {
+  display: block;
+  position: absolute;
+  top: -2rem;
+  left: -2rem;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  color: #fff;
+  background: var(--red);
+  border-radius: 5rem;
+}
+
+section.videos {
+  background-color: #000;
+}
+
+section.videos h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 1.4rem;
+  margin-top: -1rerm;
+}
+
+section.videos p {
+  text-align: center;
+  margin: 5rem 0;
+  color: #fff;
+  font-size: 1.5rem;
+}
+section.videos h1 span {
+  text-transform: uppercase;
+}
+
+section.videos .card-wrapper {
+  display: grid;
+  margin-left: -9.8rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 4rem;
+  grid-row-gap: 4rem;
+}
+
+section.videos .card-wrapper .card {
+  border: 3px solid #fff;
+  /* padding: 0 3rem; */
+  padding: 1rem 1rem;
+  box-sizing: border-box;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 7.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+}
+
+.scroll-top img {
+  width: 8rem;
+  animation: float 3s linear infinite;
+}
+
+@keyframes float {
+  100%,
+  0% {
+    transform: translateY(0rem);
+  }
+
+  50% {
+    transform: translateY(-3rem);
+  }
+}
