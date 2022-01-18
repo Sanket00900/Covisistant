@@ -55,4 +55,23 @@ $(document).ready(function(){
   
     });
   
+  init()
+
+  function init() {
+    var url = "https://api.covid19api.com/summary"
+    $.get(url, function (data) {
+      console.log(data.Global);
+
+      var data = `
+      <td>${data.Global.NewConfirmed}</td>
+      <td>${data.Global.TotalConfirmed}</td>
+      <td>${data.Global.NewDeaths}</td>
+      <td>${data.Global.TotalDeaths}</td>
+    
+      `
+      $("#data").html(data)
+    })
+  }
+
+
   });

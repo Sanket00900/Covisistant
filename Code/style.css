@@ -51,6 +51,7 @@ section {
   text-transform: capitalize;
   font-weight: normal;
   padding: 1rem;
+  text-align: center;
 }
 
 header {
@@ -105,7 +106,7 @@ header.sticky {
   display: inline-block;
   margin-top: 1rem;
   padding: 1rem 4rem;
-  border-radius: 5rem;
+  border-radius: 1.5rem;
   background: var(--blue);
   color: #fff;
   overflow: hidden;
@@ -172,13 +173,63 @@ header.sticky {
   background: var(--dark-blue);
 }
 
+.spread {
+  background-color: #000;
+}
+
+.spread .header {
+  text-align: center;
+  color: #e75151;
+  margin: -3rem;
+  font-size: 4.5rem;
+}
+
+.spread.table,
+th,
+td {
+  margin-top: 3rem;
+  border: 1px solid black;
+  width: 200px;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.spread img {
+  margin: 5rem 0;
+  width: 100%;
+  padding: 4rem;
+}
+table tr {
+  color: white;
+  background-color: #c05252;
+}
+
+.btnn {
+  margin-top: 1rem;
+  padding: 0.8rem 4rem;
+  border-radius: 1.5rem;
+  background: var(--blue);
+  color: #fff;
+  font-size: 1.7rem;
+  margin-top: 3rem;
+}
+
+.btnn:hover {
+  background-color: var(--dark-blue);
+  transition: 0.4s all ease-in;
+}
+
+.btn-wrapper {
+  text-align: center;
+}
+
 .prevent {
   margin: 1rem 0;
 }
 .prevent .heading {
   text-align: center;
   font-size: 4rem;
-  margin: 2rem 0;
+  margin: -2rem 0;
 }
 .prevent .box-container {
   display: flex;
@@ -226,6 +277,7 @@ header.sticky {
 
 .symtoms .heading {
   font-size: 4rem;
+  text-align: left;
 }
 
 .symtoms .content {
@@ -379,3 +431,95 @@ section.videos .card-wrapper .card {
     transform: translateY(-3rem);
   }
 }
+
+/* media queries 
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  section {
+    padding: 1rem 3%;
+    padding-top: 8rem;
+  }
+
+  #menu {
+    display: block;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 2rem;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+  }
+
+  header .navbar.nav-toggle {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  header .navbar a {
+    display: block;
+    margin: 1.5rem 0;
+    font-size: 2rem;
+  }
+
+  .fa-times {
+    transform: rotate(180deg);
+  }
+
+  .symptoms .column .main-image img {
+    display: none;
+  }
+
+  .hand-wash .column .main-image img {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  .home .content h1 {
+    font-size: 4rem;
+  }
+
+  .home .content h3 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .home .content h1 {
+    font-size: 3.5rem;
+  }
+
+  .home .content h3 {
+    font-size: 2.5rem;
+  }
+
+  .symptoms .column .box-container .box img {
+    width: 14rem;
+  }
+
+  .precautions .column .box-container .box {
+    flex-flow: column;
+    text-align: center;
+  }
+
+  .doctor .box-container .box {
+    width: 100%;
+  }
+} */
