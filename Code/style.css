@@ -432,7 +432,7 @@ section.videos .card-wrapper .card {
   }
 }
 
-/* media queries 
+/* media queries  */
 
 @media (max-width: 1200px) {
   html {
@@ -522,4 +522,4 @@ section.videos .card-wrapper .card {
   .doctor .box-container .box {
     width: 100%;
   }
-} */
+}
